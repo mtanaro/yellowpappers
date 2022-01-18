@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\cypress",
+    "\\cypress\\fixtures",
+    "\\cypress\\integration",
+    "\\cypress\\plugins",
+    "\\cypress\\reports",
+    "\\cypress\\reports\\SuiteExecution-Report",
+    "\\cypress\\sources",
+    "\\cypress\\support",
+    "\\cypress\\temp"
+  ],
+  "SelectedNode": "\\cypress\\support\\loginLogout.js",
+  "PreviewInSolutionExplorer": false
+}

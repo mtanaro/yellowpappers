@@ -1,0 +1,29 @@
+{
+  "author": "",
+  "dependencies": {},
+  "description": "",
+  "devDependencies": {
+    "cypress": "^3.8.3",
+    "cypress-mochawesome-reporter": "^2.3.0",
+    "cypress-multi-reporters": "^1.5.0",
+    "mocha": "^9.1.4",
+    "mochawesome": "^7.0.1",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.0.1"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "test",
+  "scripts": {
+    "clean:reports": "if exist cypress\\reports rmdir /s/q cypress\\reports ",
+    "clean:temp": "@powershell rm -r -fo cypress/temp -ErrorAction SilentlyContinue",
+    "create:temp":"@powershell New-Item -Path cypress/temp/ -ItemType Directory -ErrorAction SilentlyContinue",
+    "cypress": "cypress open",
+    "test": "cypress run",
+    "merge": "mochawesome-merge ./cypress/reports/*.json > ./cypress/temp/temp-merged-test-report.json",
+    "generate_report": "marge ./cypress/temp/temp-merged-test-report.json -f report -o ./cypress/reports/SuiteExecution-Report --inline",
+    "fullRunHeadless": "npm run clean:reports && npm run clean:temp && npm run create:temp && cypress run && npm run merge && npm run generate_report"
+  },
+  "version": "1.0.0"
+}

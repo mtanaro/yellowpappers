@@ -1,0 +1,42 @@
+README
+
+This frame was created in Cypress. All the transactional SPEC where created in a CRUD type operation so, any request which create a record will be deleted (DELETE request) in each test case
+
+There are classes with methods in support, to reuse code and help with automation tasks
+
+Also there are fixture files to work with data
+
+
+Preconditions:
+Is mandatory to have Cypress and NODE.JS installed in the project folder, is you don't have it... please, follow steps bellow
+
+
+1. Open your IDE terminal and type: npm init
+2. Once the installation has finished, type: npm install cypress --save-dev
+
+How to execute the automation frame
+
+To execute the test suit you should type (Also in your terminal): 
+
+npm run cypress
+
+
+A gift for you:
+
+For this challenge I created a local reporter only for you (Mochawesome). Just to be sure the report will work as expected, run in terminal the command bellow 
+
+ npm install mocha cypress-multi-reporters mochawesome mochawesome-merge mochawesome-report-generator
+
+How do it work?
+This is a local report that you can extract and send by email. copy the line bellow and execute it in your terminal
+
+npm run fullRunHeadless
+
+This command will execute the same suite in headless mode. Once the execution is finished you will see a local address to access the report, copy the line and past it in a browser of your choice
+
+As soon you where run this script you will notice for sure, a report folder will create into the project, don't worry at all... The script it self will delete that folder in the next execution
+(So the project will continue clean)
+
+Also there is a git ignore to avoid to push that challenge
+
+Good luck and enjoy the frame :)
